@@ -8,7 +8,10 @@ class BankAccount
 {
 	Money balance;
 public:
-	BankAccount();
-	virtual ~BankAccount();
+	BankAccount() {};
+	virtual ~BankAccount() {};
+
+	virtual void Deposit(Money money) = 0;
+	virtual void Withdraw(Money money) = 0;
 };
 
