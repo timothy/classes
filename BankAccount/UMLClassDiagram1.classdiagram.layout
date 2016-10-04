@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UMLClassDiagram1">
+  <logicalClassDesignerModelMoniker Id="c2ea234c-3f21-48ab-ade0-0134e961364a" />
+  <nestedChildShapes>
+    <classShape Id="2ad12bc5-f382-497c-8489-d5e05e6fbe61" absoluteBounds="2.25, 1.25, 1.5, 1.3828124701976776" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="e0d1e279-c026-4ac5-8d12-c77b373febd3" LastKnownName="BankAccount" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="c4c82f28-7ac4-4a2d-a107-1bafb272c98a" absoluteBounds="2.265, 1.6400000000000001, 1.4700000000000002, 0.36132811258236563" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="c061344a-bc93-43f4-bdc7-92fd0309656f" absoluteBounds="2.265, 2.0113281125823654, 1.4700000000000002, 0.52148435761531187" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4edf9e58-784f-4b10-9599-ceb29bbe2d7b" absoluteBounds="1, 3.625, 1.5, 1.2226562251647311" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="c839a0b5-9fcb-4b3e-9c13-ac00522dc259" LastKnownName="CheckingAccount" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="63bee7d5-9872-48c6-bee1-ab3ec7d52bb9" absoluteBounds="1.015, 4.015, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="28f0d3e7-c483-4e40-9334-cba1bcb3d97a" absoluteBounds="1.015, 4.22617186754942, 1.4700000000000002, 0.521484357615312" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <generalizationConnector edgePoints="[(1.75 : 3.625); (1.75 : 3.00781247019768); (3 : 3.00781247019768); (3 : 2.63281247019768)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110">
+      <generalizationMoniker Id="2fe0ef4b-8624-41d4-baf2-0d1a23a1af6b" />
+      <relativeChildShapes />
+      <nodes>
+        <classShapeMoniker Id="4edf9e58-784f-4b10-9599-ceb29bbe2d7b" />
+        <classShapeMoniker Id="2ad12bc5-f382-497c-8489-d5e05e6fbe61" />
+      </nodes>
+    </generalizationConnector>
+    <classShape Id="1eeb398f-aaa0-43cb-957e-55ca83460180" absoluteBounds="3.875, 3.625, 1.5, 1.2226562251647311" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="6f2e5a05-43fd-46d0-a492-33eff1bea223" LastKnownName="SavingsAccount" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="72069bd8-a01d-433c-8b81-d4eb8d4eef2f" absoluteBounds="3.89, 4.015, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="4a90e304-c8a5-4f66-b73e-3d0145af1561" absoluteBounds="3.89, 4.22617186754942, 1.4700000000000002, 0.521484357615312" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <generalizationConnector edgePoints="[(4.625 : 3.625); (4.625 : 3.00781247019768); (3 : 3.00781247019768); (3 : 2.63281247019768)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110">
+      <generalizationMoniker Id="f010a435-fb02-47c5-bc91-227e7239be85" />
+      <relativeChildShapes />
+      <nodes>
+        <classShapeMoniker Id="1eeb398f-aaa0-43cb-957e-55ca83460180" />
+        <classShapeMoniker Id="2ad12bc5-f382-497c-8489-d5e05e6fbe61" />
+      </nodes>
+    </generalizationConnector>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>
