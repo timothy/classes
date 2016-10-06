@@ -14,4 +14,3 @@ public:
 	virtual void Deposit(Money money) = 0;
 	virtual void Withdraw(Money money) = 0;
 };
-
