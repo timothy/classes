@@ -146,19 +146,24 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BankAccount.h" />
+    <ClInclude Include="CheckingAccount.h" />
     <ClInclude Include="Money.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Transaction.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CheckingAccount.cpp" />
     <ClCompile Include="classes.cpp" />
+    <ClCompile Include="Money.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Transaction.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="classes.rc" />

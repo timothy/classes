@@ -6,6 +6,7 @@
 //this is an example of a polymorphic class
 class BankAccount
 {
+protected:
 	Money balance;
 public:
 	BankAccount() {};
