@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Transaction.h"
+#include "Money.h"
 #include <iostream>
 
 using namespace std;
@@ -18,6 +19,14 @@ void Transaction::transact(string t)
 {
 	transactionCount++;
 	log + "Transaction Number:" + to_string(transactionCount) + "\nAmount:" + t + " \n\n";
+}
+
+void Transaction::transact(Money money)
+{
+	transactionCount++;
+	log + "Transaction Number:" + to_string(transactionCount) + "\nAmount:" 
+	+ to_string(money.getDollars()) +"."+ to_string(money.getChange()) 
+	+ " \n\n";
 }
 
 string Transaction::veiw(void) const

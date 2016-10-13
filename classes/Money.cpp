@@ -21,6 +21,23 @@ void Money::add(int dAmt, int pennyAmt) {
 	}
 }
 
+void Money::add(Money money) {
+	if (money.getDollars() > 0) {
+		dollars += money.getDollars();
+	}
+	if (money.getChange() > 0) {
+		if (money.getChange() < 100)
+		{
+			cents += money.getChange();
+		}
+		else
+		{
+			dollars += money.getChange() / 100;
+			cents += money.getChange() % 100;
+		}
+	}
+}
+
 void Money::sub(int dAmt, int pennyAmt) {
 	if (dAmt > 0) {
 		dollars -= dAmt;
@@ -34,6 +51,23 @@ void Money::sub(int dAmt, int pennyAmt) {
 		{
 			dollars -= pennyAmt / 100;
 			cents -= pennyAmt % 100;
+		}
+	}
+}
+
+void Money::sub(Money money) {
+	if (money.getDollars() > 0) {
+		dollars -= money.getDollars();
+	}
+	if (money.getChange() > 0) {
+		if (money.getChange() < 100)
+		{
+			cents -= money.getChange();
+		}
+		else
+		{
+			dollars -= money.getChange() / 100;
+			cents -= money.getChange() % 100;
 		}
 	}
 }

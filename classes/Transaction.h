@@ -14,6 +14,7 @@ public:
 	~Transaction();
 
 	void transact(std::string t);
+	void transact(Money t);
 	 std::string veiw(void) const;
 	 void print(void) const;
 };
