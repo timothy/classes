@@ -13,7 +13,7 @@ public:
 	//Note: "explicit" means constructor or conversion function doesn't allow implicit conversions or copy-initialization.
 	explicit Money(int dollars = 0, int cents = 0)
 		: dollars(dollars),
-		  cents(cents)
+		cents(cents)
 	{
 	}
 

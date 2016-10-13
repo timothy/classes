@@ -13,9 +13,15 @@ public:
 	}
 	~Transaction();
 
-	void transact(std::string t);
-	void transact(Money t);
-	 std::string veiw(void) const;
-	 void print(void) const;
+	std::string logFormat(std::string type, std::string t, std::string balance_string);
+	std::string logFormat(std::string type, int dollars, int cents, Money balance_money);
+	std::string logFormat(std::string type, Money t, Money balance_money);
+
+	void transact(std::string type, std::string t, std::string balance_string);
+	void transact(std::string type, Money t, Money balance_money);
+	void transact(std::string type, int dollars, int cents, Money balance_money);
+
+	std::string get(void) const;
+	void print(void) const;
 };
 

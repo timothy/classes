@@ -14,6 +14,4 @@
 
 // TODO: reference additional headers your program requires here
 #include "Money.h"
-#include "BankAccount.h"
-#include "Transaction.h"
 #include "CheckingAccount.h"
