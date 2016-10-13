@@ -41,7 +41,7 @@ void Money::add(Money money) {
 void Money::sub(int dAmt, int pennyAmt) {
 	if (dAmt > 0) {
 		dollars -= dAmt;
-	}
+	}//todo make sure you cannot have a negative pennyAmt.
 	if (pennyAmt > 0) {
 		if (pennyAmt < 100)
 		{

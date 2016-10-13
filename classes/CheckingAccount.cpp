@@ -3,7 +3,7 @@
 
 CheckingAccount::CheckingAccount(int dollars, int cents)
 {
-	balance.add(dollars, cents);
+	Deposit(dollars, cents);
 }
 CheckingAccount::CheckingAccount()
 {

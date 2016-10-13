@@ -7,7 +7,6 @@
 #include <ctime>
 using namespace std;
 
-//TODO find out where the infinite loop is happening...
 int main()
 {
 	srand(time(nullptr));
@@ -17,7 +16,7 @@ int main()
 
 	ch2.printTransaction();
 
-	//if you come out with a negative account balance than you have to go to financial management class!
+//	if you come out with a negative account balance than you have to go to financial management class!
 	for(auto i = 0; i < 10; i++)
 	{
 		ch1.Deposit(rand() % 30 + 1, rand() % 100 + 1);
