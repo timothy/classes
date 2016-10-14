@@ -13,9 +13,11 @@ public:
 	}
 	~Transaction();
 
-	std::string logFormat(std::string type, std::string t, std::string balance_string);
-	std::string logFormat(std::string type, int dollars, int cents, Money balance_money);
-	std::string logFormat(std::string type, Money t, Money balance_money);
+	static std::string addZero(int cents);
+
+	std::string logFormat(std::string type, std::string t, std::string balance_string) const;
+	std::string logFormat(std::string type, int dollars, int cents, Money balance_money) const;
+	std::string logFormat(std::string type, Money t, Money balance_money) const;
 
 	void transact(std::string type, std::string t, std::string balance_string);
 	void transact(std::string type, Money t, Money balance_money);

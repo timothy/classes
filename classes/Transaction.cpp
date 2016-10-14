@@ -15,21 +15,28 @@ Transaction::~Transaction()
 {
 }
 
-std::string Transaction::logFormat(std::string type, std::string t, std::string balance_string)
+std::string Transaction::addZero(int cents)
+{
+	if (cents < 10 && cents > 0) { return "0"; }
+	if (cents == 0) { return "00"; }
+	return "";
+}
+
+std::string Transaction::logFormat(std::string type, std::string amt, std::string balance_string) const
 {
 	return "Transaction Number:" + to_string(transactionCount) + "\n" +
-		type + " Amount: $" + t +
+		type + " Amount: $" + amt +
 		"\nEnd Balance: $" + balance_string + "\n\n";
 }
 
-std::string Transaction::logFormat(std::string type, int dollars, int cents, Money balance_money)
+std::string Transaction::logFormat(std::string type, int dollars, int cents, Money balance_money) const
 {
-	return logFormat(type, to_string(dollars) +"."+ to_string(cents), to_string(balance_money.getDollars()) + "." + to_string(balance_money.getChange()));
+	return logFormat(type, to_string(dollars) + "." + addZero(cents) + to_string(cents), to_string(balance_money.getDollars()) + "." + addZero(balance_money.getChange()) + to_string(balance_money.getChange()));
 }
 
-std::string Transaction::logFormat(std::string type, Money t, Money balance_money)
+std::string Transaction::logFormat(std::string type, Money t, Money balance_money) const
 {
-	return logFormat(type, to_string(t.getDollars()) + "." + to_string(t.getChange()), to_string(balance_money.getDollars()) + "." + to_string(balance_money.getChange()));
+	return logFormat(type, to_string(t.getDollars()) + "." + addZero(t.getChange()) + to_string(t.getChange()), to_string(balance_money.getDollars()) + "." + addZero(balance_money.getChange()) + to_string(balance_money.getChange()));
 }
 
 void Transaction::transact(string type, string t, string balance_string)
@@ -47,7 +54,7 @@ void Transaction::transact(string type, Money money, Money balance_money)
 void Transaction::transact(string type, int dollars, int cents, Money balance_money)
 {
 	transactionCount++;
-	log += logFormat(type, dollars,  cents, balance_money);
+	log += logFormat(type, dollars, cents, balance_money);
 }
 
 string Transaction::get(void) const
