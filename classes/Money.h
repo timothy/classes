@@ -23,7 +23,7 @@ public:
 	void sub(Money money);
 
 	int getDollars(void) const { return dollars; }
-	int getChange(void) const { return cents; }
+	int getCents(void) const { return cents; }
 
 	std::string veiw() const
 	{

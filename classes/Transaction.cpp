@@ -31,12 +31,12 @@ std::string Transaction::logFormat(std::string type, std::string amt, std::strin
 
 std::string Transaction::logFormat(std::string type, int dollars, int cents, Money balance_money) const
 {
-	return logFormat(type, to_string(dollars) + "." + addZero(cents) + to_string(cents), to_string(balance_money.getDollars()) + "." + addZero(balance_money.getChange()) + to_string(balance_money.getChange()));
+	return logFormat(type, to_string(dollars) + "." + addZero(cents) + to_string(cents), to_string(balance_money.getDollars()) + "." + addZero(balance_money.getCents()) + to_string(balance_money.getCents()));
 }
 
 std::string Transaction::logFormat(std::string type, Money t, Money balance_money) const
 {
-	return logFormat(type, to_string(t.getDollars()) + "." + addZero(t.getChange()) + to_string(t.getChange()), to_string(balance_money.getDollars()) + "." + addZero(balance_money.getChange()) + to_string(balance_money.getChange()));
+	return logFormat(type, to_string(t.getDollars()) + "." + addZero(t.getCents()) + to_string(t.getCents()), to_string(balance_money.getDollars()) + "." + addZero(balance_money.getCents()) + to_string(balance_money.getCents()));
 }
 
 void Transaction::transact(string type, string t, string balance_string)

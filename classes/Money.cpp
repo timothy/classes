@@ -22,7 +22,7 @@ void Money::add(int dAmt, int pennyAmt) {
 }
 
 void Money::add(Money money) {
-	add(money.getDollars(), money.getChange());
+	add(money.getDollars(), money.getCents());
 }
 
 void Money::sub(int dAmt, int pennyAmt) {
@@ -43,5 +43,5 @@ void Money::sub(int dAmt, int pennyAmt) {
 }
 
 void Money::sub(Money money) {
-	sub(money.getDollars(), money.getChange());
+	sub(money.getDollars(), money.getCents());
 }
