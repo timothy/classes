@@ -22,8 +22,7 @@ void CheckingAccount::Deposit(Money money)
 
 void CheckingAccount::Deposit(int dollars, int cents)
 {
-	balance.add(dollars, cents);
-	transaction_.transact(depositStr, dollars, cents, balance);
+	Deposit(Money(dollars,cents));
 }
 
 void CheckingAccount::Withdraw(Money money)
@@ -34,6 +33,5 @@ void CheckingAccount::Withdraw(Money money)
 
 void CheckingAccount::Withdraw(int dollars, int cents)
 {
-	balance.sub(dollars, cents);
-	transaction_.transact(withdrawStr, dollars, cents, balance);
+	Withdraw(Money(dollars, cents));
 }

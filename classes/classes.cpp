@@ -13,6 +13,13 @@ int main()
 
 	CheckingAccount ch1;
 	CheckingAccount ch2(5, 5);
+	CheckingAccount ch3(5, 33);
+	ch3.Withdraw(5, 83);
+	ch3.printTransaction();
+
+	CheckingAccount ch4(5, 330);
+	ch4.Withdraw(5, 830);
+	ch4.printTransaction();
 
 	ch2.printTransaction();
 

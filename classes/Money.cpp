@@ -26,21 +26,22 @@ void Money::add(Money money) {
 }
 
 void Money::sub(int dAmt, int pennyAmt) {
-	if (dAmt > 0) {
-		dollars -= dAmt;
-	}
-	if (pennyAmt > 0) {
-		if (cents - pennyAmt > 0)
-		{
-			cents -= pennyAmt;
+
+		if (dAmt > 0) {
+			dollars -= dAmt;
 		}
-		else
-		{
-			dollars -= 1;
-			cents = (100 - pennyAmt);
+		if (pennyAmt > 0) {
+			if (cents - pennyAmt > 0 || (dollars == 0 && cents - pennyAmt > -100))
+			{
+				cents -= pennyAmt;
+			}
+			else
+			{
+				dollars -= (cents - pennyAmt) / 100;
+				cents = (cents - pennyAmt) % 100;
+			}
 		}
 	}
-}
 
 void Money::sub(Money money) {
 	sub(money.getDollars(), money.getCents());

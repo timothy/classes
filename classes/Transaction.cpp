@@ -17,9 +17,7 @@ Transaction::~Transaction()
 
 std::string Transaction::addZero(int cents)
 {
-	if (cents < 10 && cents > 0) { return "0"; }
-	if (cents == 0) { return "00"; }
-	return "";
+	return cents < 10 ? "0" : "";
 }
 
 std::string Transaction::logFormat(std::string type, std::string amt, std::string balance_string) const
@@ -31,7 +29,8 @@ std::string Transaction::logFormat(std::string type, std::string amt, std::strin
 
 std::string Transaction::logFormat(std::string type, int dollars, int cents, Money balance_money) const
 {
-	return logFormat(type, to_string(dollars) + "." + addZero(cents) + to_string(cents), to_string(balance_money.getDollars()) + "." + addZero(balance_money.getCents()) + to_string(balance_money.getCents()));
+	Money money(dollars, cents);
+	return logFormat(type, to_string(money.getDollars()) + "." + addZero(money.getCents()) + to_string(money.getCents()), to_string(balance_money.getDollars()) + "." + addZero(balance_money.getCents()) + to_string(balance_money.getCents()));
 }
 
 std::string Transaction::logFormat(std::string type, Money t, Money balance_money) const
