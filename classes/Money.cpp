@@ -9,65 +9,39 @@ void Money::add(int dAmt, int pennyAmt) {
 		dollars += dAmt;
 	}
 	if (pennyAmt > 0) {
-		if (pennyAmt < 100)
+		if (pennyAmt + cents < 100)
 		{
 			cents += pennyAmt;
 		}
 		else
 		{
-			dollars += pennyAmt / 100;
-			cents += pennyAmt % 100;
+			dollars += (pennyAmt + cents) / 100;
+			cents = (pennyAmt + cents) % 100;
 		}
 	}
 }
 
 void Money::add(Money money) {
-	if (money.getDollars() > 0) {
-		dollars += money.getDollars();
-	}
-	if (money.getChange() > 0) {
-		if (money.getChange() < 100)
-		{
-			cents += money.getChange();
-		}
-		else
-		{
-			dollars += money.getChange() / 100;
-			cents += money.getChange() % 100;
-		}
-	}
+	add(money.getDollars(), money.getChange());
 }
 
 void Money::sub(int dAmt, int pennyAmt) {
 	if (dAmt > 0) {
 		dollars -= dAmt;
-	}//todo make sure you cannot have a negative pennyAmt.
+	}
 	if (pennyAmt > 0) {
-		if (pennyAmt < 100)
+		if (cents - pennyAmt > 0)
 		{
 			cents -= pennyAmt;
 		}
 		else
 		{
-			dollars -= pennyAmt / 100;
-			cents -= pennyAmt % 100;
+			dollars -= 1;
+			cents = (100 - pennyAmt);
 		}
 	}
 }
 
 void Money::sub(Money money) {
-	if (money.getDollars() > 0) {
-		dollars -= money.getDollars();
-	}
-	if (money.getChange() > 0) {
-		if (money.getChange() < 100)
-		{
-			cents -= money.getChange();
-		}
-		else
-		{
-			dollars -= money.getChange() / 100;
-			cents -= money.getChange() % 100;
-		}
-	}
+	sub(money.getDollars(), money.getChange());
 }
