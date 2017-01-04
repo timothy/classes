@@ -1,7 +1,7 @@
 # classes
 This is a simple C++ class syntax example - made by Timothy
 
-I wanted to refresh my C++ snytax and skills... I did this to go over some basic C++ class syntax as a refresh.
+I created this primarily as a fun way to refresh my C++ code writing skills and learn some of the new C++14 features.
 
 ========================================================================
     Lessons Learned
